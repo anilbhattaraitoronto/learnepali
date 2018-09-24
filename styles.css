@@ -1,0 +1,101 @@
+body{
+    background: rgb(226, 235, 238);
+}
+#wrapper{
+    width: 80%;
+    background: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px gray;
+}
+h2, h3{
+    color: white;
+}
+header{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    margin-bottom: 20px;
+    /* text-align: right; */
+    color: rgb(185, 129, 7);
+    border-radius: 3px;
+    padding-right: 10px;
+}
+header img{
+    width: 70px;
+    height: 92%;
+    margin-top: 4px;
+}
+#main-nav{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(50px, 1fr));
+    grid-gap: 2px;
+    /* text-align:center; */
+}
+#main-nav a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgb(143, 113, 13);
+    padding: 2px;
+}
+#start-play {
+    font-size: 1.4rem;
+    color: green;
+    margin: 80px 0px;
+}
+#vowel-lessons{
+    background: rgb(42, 48, 42);
+    padding: 10px;
+    margin: 20px 0px;
+}
+.lesson-letters{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-gap: 5px;
+    margin: 40px 0px;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: 500;
+    border: 3px solid rgb(175, 127, 72);
+    text-align: center;
+}
+.lesson-letters>div{
+    color: rgb(114, 73, 12);
+    background: rgb(238, 232, 223);
+    border-radius: 2px;
+}
+#syllable-lessons{
+    background: rgb(62, 60, 55);
+    padding: 10px;
+    margin: 20px 0px;
+}
+input[type="text"]{
+    width: 80px;
+    height: 60px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    background: rgb(219, 190, 93);
+    margin: 20px 0px;
+    font-size: 3.2rem;
+    color: rgb(110, 46, 46);
+}
+button{
+    height: 34px;
+    width: 80px;
+    border-radius: 4px;
+    background: rgb(219, 190, 93);
+}
+label{
+    color:#dbebf2;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+footer{
+    background:lightblue;
+    padding: 10px;
+    margin: 20px 0px;
+}
+#score-reset, #vowel-list1, #vowel-list2, #vowel-list3, #syllable-list1, #syllable-list2, #syllable-list3, #syllable-list4, #syllable-list5, #syllable-list6, #syllable-list7 {
+    display: none;
+}
