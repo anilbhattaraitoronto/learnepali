@@ -17,15 +17,15 @@
             <!-- <img src="/img/varnamala1.png" alt="Nepali character list"> -->
         </header>
         <nav id="main-nav">
-            <a href="#">Home</a>
-            <a href="/pages/vowels.html">Vowels</a>
-            <a href="/pages/syllables.html">Syllables</a>
-            <a href="/pages/blog.html">Blog</a>
+            <a href="./index.html">Home</a>
+            <a href="./pages/vowels.html">Vowels</a>
+            <a href="./pages/syllables.html">Syllables</a>
+            <a href="./pages/blog.html">Blog</a>
         </nav>
         <div id="start-play">
-            <p>Do you want to start learning Nepali?
-                <button id="yes-button">Yes</button>
-                <button>No</button></p>
+            <p>Do you want to start learning Nepali?</p>
+                <button id="yes-button">Yes</button><br/>
+                <button>No</button><br/>
         </div>
         <main id="lessons">
             <div id="score-reset">
@@ -44,9 +44,11 @@
                         <div>ई</div>
                     </section>
                     <form class="input-form" id="vowel-lesson1-form">
-                        <label for="">Please Type The Vowel</label><br />
-                        <input type="text">
-                        <button class="submit-button">Submit</button>
+                        <fieldset>
+                            <legend>Please Type The Vowel</legend>
+                            <input type="text">
+                            <button class="submit-button">Submit</button>
+                        </fieldset>
                     </form>
                 </div>
                 <div class="vowel-list" id="vowel-list2">
@@ -184,10 +186,12 @@
                         <input type="text">
                         <button class="submit-button">Submit</button>
                     </form>
+                   
                 </div>
             </article>
 
         </main>
+        <div id="message"><p>Congratulations! You finished all the primary levels of learning Nepali Characters</p></div>
         <footer>
             <p>&copy;Anil Bhattarai, 2018</p>
         </footer>

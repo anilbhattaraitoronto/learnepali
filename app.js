@@ -50,6 +50,7 @@ const syllables6 = document.querySelectorAll('#syllable-lesson6 div');
 const syllableList7 = document.querySelector('#syllable-list7');
 const syllable7Form = document.forms['syllable-lesson7-form'];
 const syllables7 = document.querySelectorAll('#syllable-lesson7 div');
+const message = document.querySelector('#message');
 
 
 
@@ -64,11 +65,13 @@ resetButton.addEventListener('click', function (event) {
 });
 vowels1Form.addEventListener('submit', function (event) {
     event.preventDefault();
-    const value = vowels1Form.querySelector('input[type="text"]').value;
+    var value = vowels1Form.querySelector('input[type="text"]').value;
     vowels1.forEach(function (vowel) {
-        if (value == vowel.textContent) {
+        if (value == vowels1[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
-            console.log(value, vowel.textContent);
+            vowels1Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            })
             if (scoreCount.textContent == 4) {
                 scoreCount.textContent = 0;
                 vowelList2.style.display = 'block';
@@ -82,9 +85,11 @@ vowels2Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = vowels2Form.querySelector('input[type="text"]').value;
     vowels2.forEach(function (vowel) {
-        if (value == vowel.textContent) {
+        if (value == vowels2[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
-            console.log(value, vowel.textContent);
+            vowels2Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 4) {
                 scoreCount.textContent = 0;
                 vowelList3.style.display = 'block';
@@ -98,9 +103,11 @@ vowels3Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = vowels3Form.querySelector('input[type="text"]').value;
     vowels3.forEach(function (vowel) {
-        if (value == vowel.textContent) {
+        if (value == vowels3[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
-            console.log(value, vowel.textContent);
+            vowels3Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            })
             if (scoreCount.textContent == 4) {
                 scoreCount.textContent = 0;
                 vowelList3.style.display = 'none';
@@ -114,9 +121,11 @@ syllable1Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = syllable1Form.querySelector('input[type="text"]').value;
     syllables1.forEach(function (syllable) {
-        if (value == syllable.textContent) {
+        if (value == syllables1[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
-            console.log(value, syllable.textContent);
+            syllable1Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 5) {
                 scoreCount.textContent = 0;
                 syllableList1.style.display = 'none';
@@ -130,8 +139,11 @@ syllable2Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = syllable2Form.querySelector('input[type="text"]').value;
     syllables2.forEach(function (syllable) {
-        if (value == syllable.textContent) {
+        if (value == syllables2[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
+            syllable2Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 5) {
                 scoreCount.textContent = 0;
                 syllableList2.style.display = 'none';
@@ -145,8 +157,11 @@ syllable3Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = syllable3Form.querySelector('input[type="text"]').value;
     syllables3.forEach(function (syllable) {
-        if (value == syllable.textContent) {
+        if (value == syllables3[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
+            syllable3Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 5) {
                 scoreCount.textContent = 0;
                 syllableList3.style.display = 'none';
@@ -160,8 +175,11 @@ syllable4Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = syllable4Form.querySelector('input[type="text"]').value;
     syllables4.forEach(function (syllable) {
-        if (value == syllable.textContent) {
+        if (value == syllables4[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
+            syllable4Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 5) {
                 scoreCount.textContent = 0;
                 syllableList4.style.display = 'none';
@@ -175,8 +193,11 @@ syllable5Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = syllable5Form.querySelector('input[type="text"]').value;
     syllables5.forEach(function (syllable) {
-        if (value == syllable.textContent) {
+        if (value == syllables5[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
+            syllable5Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 5) {
                 scoreCount.textContent = 0;
                 syllableList5.style.display = 'none';
@@ -190,8 +211,11 @@ syllable6Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = syllable6Form.querySelector('input[type="text"]').value;
     syllables6.forEach(function (syllable) {
-        if (value == syllable.textContent) {
+        if (value == syllables6[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
+            syllable6Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 5) {
                 scoreCount.textContent = 0;
                 syllableList6.style.display = 'none';
@@ -205,11 +229,16 @@ syllable7Form.addEventListener('submit', function (event) {
     event.preventDefault();
     const value = syllable7Form.querySelector('input[type="text"]').value;
     syllables7.forEach(function (syllable) {
-        if (value == syllable.textContent) {
+        if (value == syllables7[scoreCount.textContent].textContent) {
             scoreCount.textContent++;
+            syllable7Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+                e.target.value = '';
+            });
             if (scoreCount.textContent == 6) {
                 scoreCount.textContent = 0;
                 syllableList7.style.display = 'none';
+                message.style.display = 'block';
+                startPlay.style.display = 'block';
             }
         }
     })

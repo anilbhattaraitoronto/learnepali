@@ -1,3 +1,7 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body{
     background: rgb(226, 235, 238);
 }
@@ -45,7 +49,7 @@ header img{
     margin: 80px 0px;
 }
 #vowel-lessons{
-    background: rgb(42, 48, 42);
+    background: rgb(82, 63, 72);
     padding: 10px;
     margin: 20px 0px;
 }
@@ -64,6 +68,7 @@ header img{
     color: rgb(114, 73, 12);
     background: rgb(238, 232, 223);
     border-radius: 2px;
+    padding-top: 10px;
 }
 #syllable-lessons{
     background: rgb(62, 60, 55);
@@ -71,31 +76,45 @@ header img{
     margin: 20px 0px;
 }
 input[type="text"]{
-    width: 80px;
+    width: 180px;
     height: 60px;
     border: 2px solid gray;
     border-radius: 4px;
     background: rgb(219, 190, 93);
     margin: 20px 0px;
     font-size: 3.2rem;
-    color: rgb(110, 46, 46);
+    color: rgb(119, 67, 18);
+    text-align: center;
 }
 button{
-    height: 34px;
-    width: 80px;
-    border-radius: 4px;
+    height: 45px;
+    width: 180px;
+    border-radius: 2px;
     background: rgb(219, 190, 93);
+    font-size: 1.8rem;
+    color: rgba(15, 18, 228, 0.658);
+    margin: 10px auto;
 }
 label{
     color:#dbebf2;
     padding: 5px;
     font-size: 1.2rem;
 }
+legend{
+    color: rgb(184, 193, 231);
+    font-size: 1.3rem;
+}
 footer{
     background:lightblue;
     padding: 10px;
     margin: 20px 0px;
 }
-#score-reset, #vowel-list1, #vowel-list2, #vowel-list3, #syllable-list1, #syllable-list2, #syllable-list3, #syllable-list4, #syllable-list5, #syllable-list6, #syllable-list7 {
+#score-reset, #vowel-list1, #vowel-list2, #vowel-list3, #syllable-list1, #syllable-list2, #syllable-list3, #syllable-list4, #syllable-list5, #syllable-list6, #syllable-list7, #message {
     display: none;
+}
+#message{
+    color: green;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
