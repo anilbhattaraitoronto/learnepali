@@ -30,7 +30,7 @@ nav{
     display:flex;
     text-align: center;
     padding: 10px 0px;
-    background: lightblue;
+    background: rgb(179, 211, 211);
     position: sticky;
     top: 0;
 }
@@ -40,7 +40,6 @@ nav a{
     font-size: 1.1rem;
     color: rgb(44, 12, 54);
 }
-
 p{
     line-height: 25px;
     padding: 10px 10px;
@@ -88,7 +87,6 @@ p{
     border: 3px solid rgb(201, 169, 133);
     text-align: center;
 }
-
 input[type="text"]{
     width: 136px;
     height: 26px;
@@ -119,11 +117,11 @@ legend{
     font-family: Arial, Helvetica, sans-serif;
 }
 footer{
-    background:rgb(35, 45, 48);
+    background: rgb(42, 82, 82);
     padding: 10px;
     margin: 20px 0px;
     color: white;
 }
-#vowels1, #vowels2, #vowels3, #syllables1, #syllables2, #syllables3, #syllables4, #syllables5, #syllables6, #syllables7, #practice-form, #character-description, #blog, #keyboard-setup, #message, #start-button{
+#vowels1, #vowels2, #vowels3, #syllables1, #syllables2, #syllables3, #syllables4, #syllables5, #syllables6, #syllables7, #practice-form, #character-description, #blog, #keyboard-setup, #message, #start-button, #redo, #master-score{
     display: none;
 }

@@ -4,6 +4,8 @@
 const yesButton = document.querySelector('#yes-button');
 const redoButton = document.querySelector('#redo');
 const nextButton = document.querySelector('#next');
+const masterScoreButton = document.querySelector('#master-score');
+const totalScore = document.querySelector('#total-score-count')
 
 const startPlay = document.querySelector('#start-playing');
 const practiceForm = document.forms['practice-form'];
@@ -14,6 +16,7 @@ const lessons = document.querySelector('#lessons');
 const characterList = document.querySelector('#character-list');
 const characterDescription = document.querySelector('#character-description');
 const characters = document.querySelector('#characters');
+
 characters.addEventListener('click', function (e) {
     e.preventDefault();
     characterDescription.style.display = 'block';
@@ -35,21 +38,24 @@ blogList.addEventListener('click', function (e) {
 const vowels1 = document.querySelector('#vowels1');
 const vowels2 = document.querySelector('#vowels2');
 redoButton.addEventListener('click', function (e) {
-    scoreCount.textContent = -1;
+    scoreCount.textContent = 0;
     vowels1.style.display = 'grid';
 });
 
 yesButton.addEventListener('click', function (event) {
     startPlay.style.display = 'none';
     characterList.textContent = 'Playing Vowels';
-    legend.textContent = "Please type the vowel from left to right"
+    legend.textContent = "Please type the vowel"
     vowels1.style.display = 'grid';
     practiceForm.style.display = 'initial';
+    redoButton.style.display = 'inline';
+    masterScoreButton.style.display = 'inline';
 
     practiceForm.addEventListener('submit', function (event) {
         event.preventDefault();
         //get value and conditions to increment the score
         scoreCount.textContent++;
+        totalScore.textContent++;
     });
 
 });
