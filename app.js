@@ -5,7 +5,6 @@ const yesButton = document.querySelector('#yes-button');
 const redoButton = document.querySelector('#redo');
 const nextButton = document.querySelector('#next');
 
-
 const startPlay = document.querySelector('#start-playing');
 const practiceForm = document.forms['practice-form'];
 const legend = document.querySelector('legend');

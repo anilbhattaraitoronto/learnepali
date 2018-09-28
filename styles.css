@@ -30,7 +30,7 @@ nav{
     display:flex;
     text-align: center;
     padding: 10px 0px;
-    background: rgb(143, 189, 228);
+    background: lightblue;
     position: sticky;
     top: 0;
 }
