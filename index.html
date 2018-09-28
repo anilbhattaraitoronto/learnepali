@@ -15,98 +15,97 @@
         <h1 id="header">Learn Nepali</h1>
         <nav>
             <a href="">Home</a>
-            <a href="">Vowels</a>
-            <a href="">Syllables</a>
-            <a href="">Blog</a>
+            <a href="" id="characters">Characters</a>
+            <a href="" id="blog-list">Blogs</a>
         </nav>
         <section id="start-playing">
             <p>Before practicing learning the vowels and root syllables, we expect you to have some basic familiarity
-                of how they sound. Please go to the 'Vowels' and 'Syllables' links above first if you are a complete
+                of how they sound. Please go to the 'Characters' link above first if you are a complete
                 beginner to Nepali, or, if, for you, the 'black letters as same as the buffaloes', as they say in
                 Nepali.</p>
             <p>Once you have some familiarity, you can start playing by pressing the start button. Play now? <button id="yes-button">Start</button></p>
         </section>
+        <main id="lessons">
+            <h3 id="character-list"></h3>
+            <section id="vowels1" class="lesson-letters">
+                <div>अ</div>
+                <div>आ</div>
+                <div>इ</div>
+                <div>ई</div>
+            </section>
+            <section id="vowels2" class="lesson-letters">
+                <div>उ</div>
+                <div>ऊ</div>
+                <div>ए</div>
+                <div>ऐ</div>
+            </section>
+            <section id="vowels3" class="lesson-letters">
+                <div>ओ</div>
+                <div>औ</div>
+                <div>अं</div>
+                <div>अ:</div>
+            </section>
+            <section id="syllables1" class="lesson-letters">
+                <div>क</div>
+                <div>ख</div>
+                <div>ग</div>
+                <div>घ</div>
+                <div>ङ</div>
+            </section>
+            <section id="syllables2" class="lesson-letters">
+                <div>च</div>
+                <div>छ</div>
+                <div>ज</div>
+                <div>झ</div>
+                <div>ञ</div>
+            </section>
+            <section id="syllables3" class="lesson-letters">
+                <div>ट</div>
+                <div>ठ</div>
+                <div>ड</div>
+                <div>ढ</div>
+                <div>ण</div>
+            </section>
+            <section id="syllables4" class="lesson-letters">
+                <div>त</div>
+                <div>थ</div>
+                <div>द</div>
+                <div>ध</div>
+                <div>न</div>
+            </section>
+            <section id="syllables5" class="lesson-letters">
+                <div>प</div>
+                <div>फ</div>
+                <div>ब</div>
+                <div>भ</div>
+                <div>म</div>
+            </section>
+            <section id="syllables6" class="lesson-letters">
+                <div>य</div>
+                <div>र</div>
+                <div>ल</div>
+                <div>व</div>
+                <div>स</div>
+            </section>
+            <section id="syllables7" class="lesson-letters">
+                <div>ष</div>
+                <div>श</div>
+                <div>ह</div>
+                <div>क्ष</div>
+                <div>त्र</div>
+                <div>ज्ञ</div>
+            </section>
+            </article>
 
-        <h3 id="character-list"></h3>
-        <section id="vowels1" class="lesson-letters">
-            <div>अ</div>
-            <div>आ</div>
-            <div>इ</div>
-            <div>ई</div>
-        </section>
-        <section id="vowels2" class="lesson-letters">
-            <div>उ</div>
-            <div>ऊ</div>
-            <div>ए</div>
-            <div>ऐ</div>
-        </section>
-        <section id="vowels3" class="lesson-letters">
-            <div>ओ</div>
-            <div>औ</div>
-            <div>अं</div>
-            <div>अ:</div>
-        </section>
-        <section id="syllables1" class="lesson-letters">
-            <div>क</div>
-            <div>ख</div>
-            <div>ग</div>
-            <div>घ</div>
-            <div>ङ</div>
-        </section>
-        <section id="syllables2" class="lesson-letters">
-            <div>च</div>
-            <div>छ</div>
-            <div>ज</div>
-            <div>झ</div>
-            <div>ञ</div>
-        </section>
-        <section id="syllables3" class="lesson-letters">
-            <div>ट</div>
-            <div>ठ</div>
-            <div>ड</div>
-            <div>ढ</div>
-            <div>ण</div>
-        </section>
-        <section id="syllables4" class="lesson-letters">
-            <div>त</div>
-            <div>थ</div>
-            <div>द</div>
-            <div>ध</div>
-            <div>न</div>
-        </section>
-        <section id="syllables5" class="lesson-letters">
-            <div>प</div>
-            <div>फ</div>
-            <div>ब</div>
-            <div>भ</div>
-            <div>म</div>
-        </section>
-        <section id="syllables6" class="lesson-letters">
-            <div>य</div>
-            <div>र</div>
-            <div>ल</div>
-            <div>व</div>
-            <div>स</div>
-        </section>
-        <section id="syllables7" class="lesson-letters">
-            <div>ष</div>
-            <div>श</div>
-            <div>ह</div>
-            <div>क्ष</div>
-            <div>त्र</div>
-            <div>ज्ञ</div>
-        </section>
-        </article>
-
-        <form class="input-form" id="practice-form">
-            <fieldset>
-                <legend></legend>
-                <input type="text">
-                <button class="submit-button">Submit | Score = <span id="score-count">0</span></button>
-                <button id="redo">ReDo</button>
-            </fieldset>
-        </form>
-
+            <form class="input-form" id="practice-form">
+                <fieldset>
+                    <legend></legend>
+                    <input type="text">
+                    <button class="submit-button">Submit | Score = <span id="score-count">0</span></button>
+                    <button id="redo">ReDo</button>
+                </fieldset>
+            </form>
+        </main>
         <article id="character-description">
             <h2>Vowels and Root Syllables</h2>
             <p>Nepali is based on 12 vowels, 36 root syllables and decimal numerical system. We will explore the
@@ -183,7 +182,7 @@
 
             <p>Practice learning the vowels and root syllables.</p>
         </article>
-        <article id="description">
+        <article id="blog">
             <h2>The Thrill of Learning Language</h2>
             <p> I now know many languages besides my native Nepali. I know Hindi. I also know some bit of Bhojpuri and
                 Maithili. In the last one year, I learned two other languages, thanks to the internet: French and

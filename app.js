@@ -7,18 +7,38 @@ const nextButton = document.querySelector('#next');
 
 
 const startPlay = document.querySelector('#start-playing');
-const characterList = document.querySelector('#character-list');
 const practiceForm = document.forms['practice-form'];
 const legend = document.querySelector('legend');
 const scoreCount = document.querySelector('#score-count');
+const lessons = document.querySelector('#lessons');
+
+const characterList = document.querySelector('#character-list');
+const characterDescription = document.querySelector('#character-description');
+const characters = document.querySelector('#characters');
+characters.addEventListener('click', function (e) {
+    e.preventDefault();
+    characterDescription.style.display = 'block';
+    blogs.style.display = 'none';
+    lessons.style.display = 'none';
+    startPlay.style.display = 'none';
+})
+
+const blogList = document.querySelector('#blog-list');
+const blogs = document.querySelector('#blog');
+blogList.addEventListener('click', function (e) {
+    e.preventDefault();
+    blogs.style.display = 'block';
+    characterDescription.style.display = 'none';
+    lessons.style.display = 'none';
+    startPlay.style.display = 'none';
+})
 
 const vowels1 = document.querySelector('#vowels1');
 const vowels2 = document.querySelector('#vowels2');
 redoButton.addEventListener('click', function (e) {
     scoreCount.textContent = -1;
+    vowels1.style.display = 'grid';
 });
-
-
 
 yesButton.addEventListener('click', function (event) {
     startPlay.style.display = 'none';
@@ -29,13 +49,8 @@ yesButton.addEventListener('click', function (event) {
 
     practiceForm.addEventListener('submit', function (event) {
         event.preventDefault();
-
-
+        //get value and conditions to increment the score
         scoreCount.textContent++;
-        if (scoreCount.textContent == 4) {
-            vowels2.style.display = 'grid';
-            vowels1.style.display = 'none';
-        }
     });
 
 });
