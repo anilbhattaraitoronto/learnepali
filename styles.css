@@ -67,9 +67,6 @@ p{
     border-radius: 2px;
     padding-top: 10px;
 }
-#character-description{
-    margin-top: 30px;
-}
 #vowel-list{
     display: grid;
     grid-template-columns: repeat(4, minmax(30px, 1fr));
@@ -88,7 +85,7 @@ p{
     text-align: center;
 }
 input[type="text"]{
-    width: 136px;
+    width: 134px;
     height: 26px;
     border: 2px solid gray;
     border-radius: 4px;
