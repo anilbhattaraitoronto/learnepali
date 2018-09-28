@@ -23,6 +23,7 @@ characters.addEventListener('click', function (e) {
     blogs.style.display = 'none';
     lessons.style.display = 'none';
     startPlay.style.display = 'none';
+    keyboardSetup.style.display = 'none';
 })
 
 const blogList = document.querySelector('#blog-list');
@@ -31,6 +32,17 @@ blogList.addEventListener('click', function (e) {
     e.preventDefault();
     blogs.style.display = 'block';
     characterDescription.style.display = 'none';
+    lessons.style.display = 'none';
+    startPlay.style.display = 'none';
+    keyboardSetup.style.display = 'none';
+})
+
+const keyboard = document.querySelector('#setup');
+const keyboardSetup = document.querySelector('#keyboard-setup');
+keyboard.addEventListener('click', function (e) {
+    e.preventDefault();
+    keyboardSetup.style.display = 'block';
+    blogs.style.display = 'none';
     lessons.style.display = 'none';
     startPlay.style.display = 'none';
 })
@@ -56,6 +68,10 @@ yesButton.addEventListener('click', function (event) {
         //get value and conditions to increment the score
         scoreCount.textContent++;
         totalScore.textContent++;
+        if (scoreCount.textContent == 4) {
+            vowels2.style.display = 'grid';
+            vowels1.style.display = 'none';
+        }
     });
 
 });
