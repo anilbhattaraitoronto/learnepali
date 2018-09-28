@@ -15,8 +15,6 @@ yesButton.addEventListener('click', function (event) {
     characterList.textContent = 'Playing Vowels';
     vowels1.style.display = 'grid';
     practiceForm.style.display = 'initial';
-
-
 })
 // const startPlay = document.querySelector('#start-play');
 // const scoreReset = document.querySelector('#score-reset');
