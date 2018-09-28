@@ -3,118 +3,121 @@
     margin: 0;
 }
 body{
-    background: rgb(226, 235, 238);
+    background: rgb(179, 211, 211);
 }
 #wrapper{
-    width: 80%;
+    width: 90%;
     background: white;
     margin: 0 auto;
-    padding: 20px;
-    border-radius: 6px;
     box-shadow: 2px 2px 5px gray;
 }
 h2, h3{
-    color: white;
+    color: rgb(39, 34, 34);
+    padding: 5px 5px;
+    color: rgb(29, 51, 80);
 }
-header{
+#header{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    margin-bottom: 20px;
-    /* text-align: right; */
-    color: rgb(185, 129, 7);
-    border-radius: 3px;
-    padding-right: 10px;
+    color: rgb(172, 69, 10);
+    position: sticky;
+    top: 0;
 }
-header img{
-    width: 70px;
-    height: 92%;
-    margin-top: 4px;
+h1{
+    padding: 20px 20px;
 }
-#main-nav{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(50px, 1fr));
-    grid-gap: 2px;
-    /* text-align:center; */
+nav{
+    display:flex;
+    text-align: center;
+    padding: 10px 0px;
+    background: rgb(143, 189, 228);
+    position: sticky;
+    top: 0;
 }
-#main-nav a{
+nav a{
+    padding: 8px;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 600;
-    color: rgb(143, 113, 13);
-    padding: 2px;
+    color: rgb(44, 12, 54);
 }
-#start-play {
-    font-size: 1.4rem;
-    color: green;
-    margin: 80px 0px;
-}
-#vowel-lessons{
-    background: rgb(82, 63, 72);
-    padding: 10px;
-    margin: 20px 0px;
+
+p{
+    line-height: 25px;
+    padding: 10px 10px;
 }
 .lesson-letters{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
     grid-gap: 5px;
-    margin: 40px 0px;
-    padding: 20px;
-    font-size: 2rem;
+    margin: 10px 0px;
+    padding: 5px;
+    font-size: 1.8rem;
     font-weight: 500;
-    border: 3px solid rgb(175, 127, 72);
+    border: 3px solid rgb(201, 169, 133);
     text-align: center;
 }
-.lesson-letters>div{
-    color: rgb(114, 73, 12);
-    background: rgb(238, 232, 223);
+.lesson-letters>div, #vowel-list>div, #syllable-list>div{
+    background:rgb(199, 184, 53);
+    color: rgb(30, 90, 160);
     border-radius: 2px;
     padding-top: 10px;
 }
-#syllable-lessons{
-    background: rgb(62, 60, 55);
-    padding: 10px;
-    margin: 20px 0px;
+#character-description{
+    margin-top: 30px;
 }
-input[type="text"]{
-    width: 180px;
-    height: 60px;
-    border: 2px solid gray;
-    border-radius: 4px;
-    background: rgb(219, 190, 93);
-    margin: 20px 0px;
-    font-size: 3.2rem;
-    color: rgb(119, 67, 18);
-    text-align: center;
+#vowel-list{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(30px, 1fr));
 }
-button{
-    height: 45px;
-    width: 180px;
-    border-radius: 2px;
-    background: rgb(219, 190, 93);
-    font-size: 1.8rem;
-    color: rgba(15, 18, 228, 0.658);
-    margin: 10px auto;
+#syllable-list{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(30px, 1fr));
 }
-label{
-    color:#dbebf2;
+#vowel-list, #syllable-list{
+    grid-gap: 5px;
+    margin: 10px 0px;
     padding: 5px;
     font-size: 1.2rem;
+    font-weight: 500;
+    border: 3px solid rgb(201, 169, 133);
+    text-align: center;
+}
+
+input[type="text"]{
+    width: 136px;
+    height: 26px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    color: rgb(119, 67, 18);
+    text-align: center;
+    margin-top: 30px;
+}
+button{
+    height: 30px;
+    width: 140px;
+    border-radius: 4px;
+    background:rgb(179, 190, 24);
+    color: rgb(18, 63, 116);
+    font-weight: bold;
+    border: 2px solid rgb(80, 98, 114);
 }
 legend{
-    color: rgb(184, 193, 231);
-    font-size: 1.3rem;
-}
-footer{
-    background:lightblue;
-    padding: 10px;
-    margin: 20px 0px;
-}
-#score-reset, #vowel-list1, #vowel-list2, #vowel-list3, #syllable-list1, #syllable-list2, #syllable-list3, #syllable-list4, #syllable-list5, #syllable-list6, #syllable-list7, #message {
-    display: none;
+    color: rgb(17, 56, 24);
+    font-size: 1.1rem;
+    margin: 5px;
 }
 #message{
-    color: green;
+    color: rgb(23, 80, 23);
     font-weight: bold;
     font-size: 1.3rem;
     font-family: Arial, Helvetica, sans-serif;
+}
+footer{
+    background:rgb(35, 45, 48);
+    padding: 10px;
+    margin: 20px 0px;
+    color: white;
+}
+#vowels1, #vowels2, #vowels3, #syllables1, #syllables2, #syllables3, #syllables4, #syllables5, #syllables6, #syllables7, #practice-form, #character-description, #description, #keyboard-setup, #message, #start-button{
+    display: none;
 }
