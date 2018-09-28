@@ -45,6 +45,7 @@ keyboard.addEventListener('click', function (e) {
     blogs.style.display = 'none';
     lessons.style.display = 'none';
     startPlay.style.display = 'none';
+    characterDescription.style.display = 'none';
 })
 
 const vowels1 = document.querySelector('#vowels1');
@@ -56,7 +57,7 @@ redoButton.addEventListener('click', function (e) {
 
 yesButton.addEventListener('click', function (event) {
     startPlay.style.display = 'none';
-    characterList.textContent = 'Playing Vowels';
+    characterList.textContent = 'Learning Vowels';
     legend.textContent = "Please type the vowel"
     vowels1.style.display = 'grid';
     practiceForm.style.display = 'initial';
