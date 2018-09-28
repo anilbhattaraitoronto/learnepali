@@ -46,6 +46,11 @@ p{
     padding: 10px 10px;
     font-size: 1.2rem;
 }
+#character-list{
+    font-size: 1.6rem;
+    color: green;
+    padding-top: 20px;
+}
 .lesson-letters{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));

@@ -2,20 +2,45 @@
 // //Starting constants
 
 const yesButton = document.querySelector('#yes-button');
+const redoButton = document.querySelector('#redo');
+const nextButton = document.querySelector('#next');
 
 
 const startPlay = document.querySelector('#start-playing');
 const characterList = document.querySelector('#character-list');
 const practiceForm = document.forms['practice-form'];
+const legend = document.querySelector('legend');
+const scoreCount = document.querySelector('#score-count');
+
 const vowels1 = document.querySelector('#vowels1');
+const vowels2 = document.querySelector('#vowels2');
+redoButton.addEventListener('click', function (e) {
+    scoreCount.textContent = -1;
+});
+
 
 
 yesButton.addEventListener('click', function (event) {
     startPlay.style.display = 'none';
     characterList.textContent = 'Playing Vowels';
+    legend.textContent = "Please type the vowel from left to right"
     vowels1.style.display = 'grid';
     practiceForm.style.display = 'initial';
-})
+
+    practiceForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+
+        scoreCount.textContent++;
+        if (scoreCount.textContent == 4) {
+            vowels2.style.display = 'grid';
+            vowels1.style.display = 'none';
+        }
+    });
+
+});
+
+
 // const startPlay = document.querySelector('#start-play');
 // const scoreReset = document.querySelector('#score-reset');
 // const scoreCount = document.querySelector('#score-count');
