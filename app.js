@@ -2,15 +2,16 @@
 // //Starting constants
 
 const yesButton = document.querySelector('#yes-button');
-const redoButton = document.querySelector('#redo');
+const lessonScoreButton = document.querySelector('#lesson-score');
 const nextButton = document.querySelector('#next');
 const masterScoreButton = document.querySelector('#master-score');
-const totalScore = document.querySelector('#total-score-count')
+const totalScore = document.querySelector('#total-score-count');
+const message = document.querySelector('#message');
 
 const startPlay = document.querySelector('#start-playing');
 const practiceForm = document.forms['practice-form'];
 const legend = document.querySelector('legend');
-const scoreCount = document.querySelector('#score-count');
+const lessonScore = document.querySelector('#score-count');
 const lessons = document.querySelector('#lessons');
 
 const characterList = document.querySelector('#character-list');
@@ -48,105 +49,197 @@ keyboard.addEventListener('click', function (e) {
     characterDescription.style.display = 'none';
 })
 
-const vowels1 = document.querySelector('#vowels1');
-const vowels2 = document.querySelector('#vowels2');
-redoButton.addEventListener('click', function (e) {
-    scoreCount.textContent = 0;
-    vowels1.style.display = 'grid';
-});
+const vowels1 = document.querySelectorAll('#vowels1 div');
+const vowels2 = document.querySelectorAll('#vowels2 div');
+const vowels3 = document.querySelectorAll('#vowels3 div');
+const syllables1 = document.querySelectorAll('#syllables1 div');
+const syllables2 = document.querySelectorAll('#syllables2 div');
+const syllables3 = document.querySelectorAll('#syllables3 div');
+const syllables4 = document.querySelectorAll('#syllables4 div');
+const syllables5 = document.querySelectorAll('#syllables5 div');
+const syllables6 = document.querySelectorAll('#syllables6 div');
+const syllables7 = document.querySelectorAll('#syllables7 div');
+
 
 yesButton.addEventListener('click', function (event) {
     startPlay.style.display = 'none';
     characterList.textContent = 'Learning Vowels';
     legend.textContent = "Please type the vowel"
-    vowels1.style.display = 'grid';
+    document.querySelector('#vowels1').style.display = 'grid';
     practiceForm.style.display = 'initial';
-    redoButton.style.display = 'inline';
+    lessonScoreButton.style.display = 'inline';
     masterScoreButton.style.display = 'inline';
-
-    practiceForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        //get value and conditions to increment the score
-        scoreCount.textContent++;
-        totalScore.textContent++;
-        if (scoreCount.textContent == 4) {
-            vowels2.style.display = 'grid';
-            vowels1.style.display = 'none';
+});
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    vowels1.forEach(function (vowel) {
+        if (value === vowels1[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+            practiceForm.querySelector('input[type="text"]').addEventListener('focus', function (event) {
+                event.target.value = '';
+            })
+        }
+        if (Number(lessonScore.textContent) === 4) {
+            document.querySelector('#vowels2').style.display = 'grid';
+            document.querySelector('#vowels1').style.display = 'none';
+            lessonScore.textContent = 0;
         }
     });
 
 });
 
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    vowels2.forEach(function (vowel) {
+        if (value === vowels2[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 4) {
+            document.querySelector('#vowels3').style.display = 'grid';
+            document.querySelector('#vowels2').style.display = 'none';
+            lessonScore.textContent = 0;
+        }
+    });
+});
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    vowels3.forEach(function (vowel) {
+        if (value === vowels3[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 4) {
+            document.querySelector('#syllables1').style.display = 'grid';
+            document.querySelector('#vowels3').style.display = 'none';
+            lessonScore.textContent = 0;
+            characterList.textContent = "Learning Root Syllables";
+        }
+    });
+});
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    syllables1.forEach(function (vowel) {
+        if (value === syllables1[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 5) {
+            document.querySelector('#syllables2').style.display = 'grid';
+            document.querySelector('#syllables1').style.display = 'none';
+            lessonScore.textContent = 0;
+        }
+    });
 
-// const startPlay = document.querySelector('#start-play');
-// const scoreReset = document.querySelector('#score-reset');
-// const scoreCount = document.querySelector('#score-count');
+});
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    syllables2.forEach(function (vowel) {
+        if (value === syllables2[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 5) {
+            document.querySelector('#syllables3').style.display = 'grid';
+            document.querySelector('#syllables2').style.display = 'none';
+            lessonScore.textContent = 0;
+        }
+    });
 
-// //Learn Vowels - used constants
+});
 
-// const vowelList1 = document.querySelector('#vowel-list1');
-// const vowels1Form = document.forms['vowel-lesson1-form'];
-// const vowels1 = document.querySelectorAll('#vowel-lesson1 div');
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    syllables3.forEach(function (vowel) {
+        if (value === syllables3[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 5) {
+            document.querySelector('#syllables4').style.display = 'grid';
+            document.querySelector('#syllables3').style.display = 'none';
+            lessonScore.textContent = 0;
+        }
+    });
+});
 
-// const vowelList2 = document.querySelector('#vowel-list2');
-// const vowels2Form = document.forms['vowel-lesson2-form'];
-// const vowels2 = document.querySelectorAll('#vowel-lesson2 div');
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    syllables4.forEach(function (vowel) {
+        if (value === syllables4[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 5) {
+            document.querySelector('#syllables5').style.display = 'grid';
+            document.querySelector('#syllables4').style.display = 'none';
+            lessonScore.textContent = 0;
+        }
+    });
+});
 
-// const vowelList3 = document.querySelector('#vowel-list3');
-// const vowels3Form = document.forms['vowel-lesson3-form'];
-// const vowels3 = document.querySelectorAll('#vowel-lesson3 div');
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    syllables5.forEach(function (vowel) {
+        if (value === syllables5[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 5) {
+            document.querySelector('#syllables6').style.display = 'grid';
+            document.querySelector('#syllables5').style.display = 'none';
+            lessonScore.textContent = 0;
+        }
+    });
+});
 
-// //Learn Root Syllables -used constants
-
-// const syllableList1 = document.querySelector('#syllable-list1');
-// const syllable1Form = document.forms['syllable-lesson1-form'];
-// const syllables1 = document.querySelectorAll('#syllable-lesson1 div');
-
-// const syllableList2 = document.querySelector('#syllable-list2');
-// const syllable2Form = document.forms['syllable-lesson2-form'];
-// const syllables2 = document.querySelectorAll('#syllable-lesson2 div');
-
-// const syllableList3 = document.querySelector('#syllable-list3');
-// const syllable3Form = document.forms['syllable-lesson3-form'];
-// const syllables3 = document.querySelectorAll('#syllable-lesson3 div');
-
-// const syllableList4 = document.querySelector('#syllable-list4');
-// const syllable4Form = document.forms['syllable-lesson4-form'];
-// const syllables4 = document.querySelectorAll('#syllable-lesson4 div');
-
-// const syllableList5 = document.querySelector('#syllable-list5');
-// const syllable5Form = document.forms['syllable-lesson5-form'];
-// const syllables5 = document.querySelectorAll('#syllable-lesson5 div');
-
-// const syllableList6 = document.querySelector('#syllable-list6');
-// const syllable6Form = document.forms['syllable-lesson6-form'];
-// const syllables6 = document.querySelectorAll('#syllable-lesson6 div');
-
-// const syllableList7 = document.querySelector('#syllable-list7');
-// const syllable7Form = document.forms['syllable-lesson7-form'];
-// const syllables7 = document.querySelectorAll('#syllable-lesson7 div');
-// const message = document.querySelector('#message');
-
-
-
-// yesButton.addEventListener('click', function (event) {
-//     startPlay.style.display = 'none';
-//     scoreReset.style.display = 'block';
-//     vowelList1.style.display = 'block';
-// });
-
-// resetButton.addEventListener('click', function (event) {
-//     scoreCount.textContent = 0;
-// });
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    syllables6.forEach(function (vowel) {
+        if (value === syllables6[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 5) {
+            document.querySelector('#syllables7').style.display = 'grid';
+            document.querySelector('#syllables6').style.display = 'none';
+            lessonScore.textContent = 0;
+        }
+    });
+});
+practiceForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const value = practiceForm.querySelector('input[type="text"]').value;
+    syllables7.forEach(function (vowel) {
+        if (value === syllables7[lessonScore.textContent].textContent) {
+            lessonScore.textContent++;
+            totalScore.textContent++;
+        }
+        if (Number(lessonScore.textContent) === 6) {
+            message.style.display = 'block';
+            lessonScore.textContent = 0;
+        }
+    });
+});
 // vowels1Form.addEventListener('submit', function (event) {
 //     event.preventDefault();
 //     var value = vowels1Form.querySelector('input[type="text"]').value;
 //     vowels1.forEach(function (vowel) {
 //         if (value == vowels1[scoreCount.textContent].textContent) {
 //             scoreCount.textContent++;
-//             vowels1Form.querySelector('input[type="text"]').addEventListener('focus', function (e) {
-//                 e.target.value = '';
-//             })
+practiceForm.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+    e.target.value = '';
+})
 //             if (scoreCount.textContent == 4) {
 //                 scoreCount.textContent = 0;
 //                 vowelList2.style.display = 'block';
