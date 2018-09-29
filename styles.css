@@ -28,18 +28,22 @@ h1{
     padding: 20px 20px;
 }
 nav{
-    display:flex;
-    text-align: center;
-    padding: 10px 0px;
     background: rgb(179, 211, 211);
     position: sticky;
     top: 0;
+    overflow: auto;
+    white-space: nowrap;
 }
 nav a{
+    display: inline-block;
     padding: 8px;
     text-decoration: none;
     font-size: 1.1rem;
     color: rgb(121, 69, 2);
+}
+nav a:hover{
+    background: gray;
+    padding: 10px;
 }
 p{
     line-height: 25px;

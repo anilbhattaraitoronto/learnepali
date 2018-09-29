@@ -227,6 +227,8 @@ practiceForm.addEventListener('submit', function (event) {
         }
         if (Number(lessonScore.textContent) === 6) {
             message.style.display = 'block';
+            document.querySelector('#syllables7').style.display = 'none';
+            practiceForm.style.display = 'none';
             lessonScore.textContent = 0;
         }
     });
@@ -237,9 +239,9 @@ practiceForm.addEventListener('submit', function (event) {
 //     vowels1.forEach(function (vowel) {
 //         if (value == vowels1[scoreCount.textContent].textContent) {
 //             scoreCount.textContent++;
-practiceForm.querySelector('input[type="text"]').addEventListener('focus', function (e) {
-    e.target.value = '';
-})
+// practiceForm.querySelector('input[type="text"]').addEventListener('focus', function (e) {
+//     e.target.value = '';
+// })
 //             if (scoreCount.textContent == 4) {
 //                 scoreCount.textContent = 0;
 //                 vowelList2.style.display = 'block';
